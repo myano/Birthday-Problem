@@ -49,6 +49,6 @@ pe = abs( (expected - dml(result) ) / dml(result)) * 100
 
 print "\n\nNumber of successful trials: ", matches
 print "Percent of successful trials: ",round(result,4)
-print "Expected percent of number of successful trials:",round(expected,4)
+print "\nExpected percent of number of successful trials:",round(expected,4)
 print "\nPercent of error:",round(pe,4)
 
