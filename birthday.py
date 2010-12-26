@@ -15,7 +15,7 @@ while trials > 0:
     trials -= 1
     # Seed random with the current time, creates more "randomness" on each iteration
     random.seed()
-
+    
     numbers = [random.randrange(1,366) for i in range(people)]
 
     #print "Here is the list of numbers: "
@@ -37,16 +37,12 @@ while trials > 0:
     if a == True:
         matches += 1
 
-print "\nNumber of successful trials: ", matches
 result = float (matches) / total_trials * 100
-print "Percent of successful trials: ",result
-
-
 expected =  (1 - decimal.Decimal(math.factorial(365)) / ( 365**people * math.factorial(365-people)))*100
+pe = abs( (expected - decimal.Decimal(result) ) / decimal.Decimal(result)) * 100
 
+print "\nNumber of successful trials: ", matches
+print "Percent of successful trials: ",result
 print "Expected percent of number of successful trials:",expected
-
-pe = abs( (expected - decimal.Decimal(result)) / decimal.Decimal(result * 100))
-
 print "Percent of error:",pe
 
