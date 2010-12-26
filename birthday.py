@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import math, random
-from decimal import Decimal
+from decimal import Decimal as dml
 
 print "This will simulate the 'Birthday Problem' by generating XX random"
 print "numbers between 1 and 365 (inclusively).\n"
@@ -43,9 +43,9 @@ while trials > 0:
     
     #print "Trial:",total_trials - trials
 
-result = Decimal(matches) / Decimal(total_trials) * 100
-expected =  (1 - Decimal(math.factorial(365)) / ( 365**people * math.factorial(365-people)))*100
-pe = abs( (expected - Decimal(result) ) / Decimal(result)) * 100
+result = dml(matches) / dml(total_trials) * 100
+expected =  (1 - dml(math.factorial(365)) / ( 365**people * math.factorial(365-people)))*100
+pe = abs( (expected - dml(result) ) / dml(result)) * 100
 
 print "\n\nNumber of successful trials: ", matches
 print "Percent of successful trials: ",round(result,4)
