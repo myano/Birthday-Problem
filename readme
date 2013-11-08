@@ -2,4 +2,4 @@ This python script simulates the Birthday Problem experiment.
 
 You can enter how many people you'd like to simulate and how many times you'd like to simulate it. 
 
-This script also provides a percent of error based on the formula expected for the problem, found here: http://en.wikipedia.org/wiki/Birthday_problem
+This script also provides a percent of error based on the formula expected for the problem, found here: https://en.wikipedia.org/wiki/Birthday_problem
